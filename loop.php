@@ -1,5 +1,6 @@
-<?php /* Display navigation to next/previous pages when applicable */ ?>
+<?php /* Вывод pagination */ ?>
 <?php if ( $wp_query->max_num_pages > 1 ) : ?>
+<!-- Вывод pagination -->
 	<div id="nav-above" class="navigation">
 		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Предыдущие публикации', 'hometask' ) ); ?></div>
 		<div class="nav-next"><?php previous_posts_link( __( 'Следующие публикации <span class="meta-nav">&rarr;</span>', 'hometask' ) ); ?></div>
@@ -52,7 +53,7 @@
 
 <?php endwhile; // End the loop. Whew. ?>
 
-<?php /* Display navigation to next/previous pages when applicable */ ?>
+<?php /* Вывод pagination*/ ?>
 <?php if ( $wp_query->max_num_pages > 1 ) : ?>
 				<div id="nav-below" class="navigation">
 		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Предыдущие публикации', 'hometask' ) ); ?></div>
