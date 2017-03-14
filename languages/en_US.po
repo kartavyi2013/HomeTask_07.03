@@ -1,0 +1,389 @@
+# WordPress Blank Pot
+# Copyright (C) 2014 ...
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: hometask\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"POT-Creation-Date: 2017-03-14 10:08+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: qwerty <translations@example.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;"
+"_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
+"__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:10 loop.php:12
+msgid "Не найдено"
+msgstr ""
+
+#: 404.php:12 loop.php:14
+msgid "К сожалению, по вашему запросу ничего не найдено."
+msgstr "Unfortunately, your search returned no results."
+
+#: archive.php:16
+#, php-format
+msgid "Архив по дням: <span>%s</span>"
+msgstr "Archive by day: <span>% s </ span>"
+
+#: archive.php:18
+#, php-format
+msgid "Архив по месяцам: <span>%s</span>"
+msgstr "Monthly archive: <span>% s </ span>"
+
+#: archive.php:20
+#, php-format
+msgid "Архив по годам: <span>%s</span>"
+msgstr "Archive by years: <span>% s </ span>"
+
+#: archive.php:22
+msgid "Архив сайта"
+msgstr "Site Archive"
+
+#: archives.php:19
+msgid "Архив по датам:"
+msgstr "Archive by date:"
+
+#: archives.php:24
+msgid "Архив по рубрикам:"
+msgstr "Archive for rubrics:"
+
+#: author.php:15
+#, php-format
+msgid "Архив автора: %s"
+msgstr "Archive of the author: %s"
+
+#: author.php:25
+#, php-format
+msgid "Об авторе: %s"
+msgstr "About the author:% s"
+
+#: category.php:10 loop-single.php:28
+#, php-format
+msgid "Рубрика: %s"
+msgstr "Rubric:% s"
+
+#: comments.php:7
+msgid "Пожалуйста, введите пароль для просмотра комментариев."
+msgstr "Please enter a password to view comments."
+
+#: comments.php:21
+#, php-format
+msgid "Один отзыв на %2$s"
+msgid_plural "%1$s отзывов на %2$s"
+msgstr[0] "One review on %2$s"
+msgstr[1] "%1$s reviews for %2$s"
+
+#: comments.php:27 comments.php:41
+msgid "<span class=\"meta-nav\">&larr;</span> Предыдущий комментарий"
+msgstr "<Span class = \"meta-nav\"> & larr; </ span> Previous comment"
+
+#: comments.php:28 comments.php:42
+msgid "Следующий комментарий <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+"The following comment <span class = \"meta-nav\"> & rarr; </ span>"
+
+#: comments.php:53
+msgid "Обсуждение закрыто."
+msgstr "The discussion is closed."
+
+#: functions.php:91
+msgid "Основная навигация"
+msgstr "Primary menu "
+
+#: functions.php:142
+msgid "Books"
+msgstr "Books"
+
+#: functions.php:148
+msgid "Record"
+msgstr "Record"
+
+#: functions.php:154
+msgid "Pattern"
+msgstr ""
+
+#: functions.php:289 loop-image.php:78 loop.php:38
+msgid "Читать полностью <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Read more <span class = \"meta-nav\"> & rarr; </ span>"
+
+#: functions.php:318
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: functions.php:322
+msgid "Спасибо! Ваш комментарий ожидает проверки."
+msgstr ""
+
+#: functions.php:329
+#, php-format
+msgid "%1$s в %2$s"
+msgstr ""
+
+#: functions.php:329 functions.php:346
+msgid "(Править)"
+msgstr ""
+
+#: functions.php:346
+msgid "Пинг:"
+msgstr ""
+
+#: functions.php:357
+msgid "Сайдбар"
+msgstr ""
+
+#: functions.php:359
+msgid "Основное меню"
+msgstr "Main menu"
+
+#: functions.php:368
+msgid "Дополнительный сайдбар"
+msgstr "Additional sidebar"
+
+#: functions.php:370
+msgid "Дополнительное меню в шаблоне на три колонки"
+msgstr ""
+
+#: functions.php:379
+msgid "Рекомендуемое"
+msgstr ""
+
+#: functions.php:381
+msgid ""
+"Область рекомендуемого находится над сайдбарами в структуре Содержание-"
+"Сайдбар-Сайдбар и Сайдбар-Сайдбар-Содержание"
+msgstr ""
+
+#: functions.php:390 functions.php:392
+msgid "Первая область виджетов в подвале"
+msgstr ""
+
+#: functions.php:401 functions.php:403
+msgid "Вторая область виджетов в подвале"
+msgstr ""
+
+#: header.php:28
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: header.php:57
+msgid "Перейти к содержанию"
+msgstr ""
+
+#: header.php:57
+msgid "К содержанию"
+msgstr ""
+
+#: links.php:21 loop-image.php:36 loop-page.php:14 loop-single.php:12
+#: loop.php:27
+msgid "Править"
+msgstr ""
+
+#: loop-image.php:6
+#, php-format
+msgid "Опубликовано %1$s"
+msgstr ""
+
+#: loop-image.php:15
+#, php-format
+msgid " в %1$s"
+msgstr ""
+
+#: loop-image.php:18
+#, php-format
+msgid "Вернуться к %s"
+msgstr ""
+
+#: loop-image.php:27
+#, php-format
+msgid "Размер полного изображения в пикселях: %s"
+msgstr ""
+
+#: loop-image.php:30
+msgid "Ссылка на полное изображение"
+msgstr ""
+
+#: loop-image.php:41
+msgid "&larr; Предыдущее изображение"
+msgstr ""
+
+#: loop-image.php:42
+msgid "Следующее изображение &rarr;"
+msgstr ""
+
+#: loop-image.php:79 loop-page.php:13 loop-single.php:23 loop.php:39
+msgid "Страницы:"
+msgstr ""
+
+#: loop-single.php:5 loop-single.php:34
+msgctxt "Предыдущая публикация"
+msgid "&larr;"
+msgstr ""
+
+#: loop-single.php:6 loop-single.php:35
+msgctxt "Следующая публикация"
+msgid "&rarr;"
+msgstr ""
+
+#: loop-single.php:16
+msgid "<span class=\"meta-nav\">&darr; </span>К комментариям"
+msgstr ""
+
+#: loop-single.php:27 loop.php:44
+msgid "Ваш отзыв"
+msgstr ""
+
+#: loop-single.php:27 loop.php:44
+msgid "1 отзыв"
+msgstr ""
+
+#: loop-single.php:27 loop.php:44
+msgid "Отзывов (%)"
+msgstr "Reviews (%)"
+
+#: loop-single.php:29 loop.php:46
+msgid "Метки:"
+msgstr ""
+
+#: loop.php:4 loop.php:58
+msgid "<span class=\"meta-nav\">&larr;</span> Предыдущие публикации"
+msgstr ""
+
+#: loop.php:5 loop.php:59
+msgid "Следующие публикации <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: loop.php:26 loop.php:30
+#, php-format
+msgid "Постоянная ссылка: %s"
+msgstr ""
+
+#: loop.php:45
+#, php-format
+msgid "Рубрики: %s"
+msgstr ""
+
+#: search.php:8
+#, php-format
+msgid "Результаты поиска: %s"
+msgstr ""
+
+#: search.php:14
+msgid "Ничего не найдено"
+msgstr ""
+
+#: search.php:16
+msgid "Ничего не найдено. Попробуете по другому запросу?"
+msgstr ""
+
+#: sidebar.php:34
+msgid "Поиск"
+msgstr ""
+
+#: sidebar.php:39
+msgid "Новое на сайте"
+msgstr ""
+
+#: sidebar.php:55
+msgid "Ссылки"
+msgstr ""
+
+#: sidebar.php:76
+msgid "Прочее"
+msgstr ""
+
+#: tag.php:10
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: theme-options.php:25
+msgid "Настройки темы"
+msgstr ""
+
+#: theme-options.php:35
+msgid "Светлая"
+msgstr ""
+
+#: theme-options.php:39
+msgid "Темная"
+msgstr ""
+
+#: theme-options.php:43
+msgid "Красная"
+msgstr ""
+
+#: theme-options.php:47
+msgid "Коричневая"
+msgstr ""
+
+#: theme-options.php:61
+msgid "Содержание-Сайдбар"
+msgstr ""
+
+#: theme-options.php:65
+msgid "Сайдбар-Содержание"
+msgstr ""
+
+#: theme-options.php:69
+msgid "Содержание-Сайдбар-Сайдбар"
+msgstr ""
+
+#: theme-options.php:73
+msgid "Сайдбар-Сайдбар-Содержание"
+msgstr ""
+
+#: theme-options.php:77
+msgid "Сайдбар-Содержание-Сайдбар"
+msgstr ""
+
+#: theme-options.php:81
+msgid "На всю ширину, без сайдбара"
+msgstr ""
+
+#: theme-options.php:116
+msgid " Настройки темы"
+msgstr ""
+
+#: theme-options.php:119
+msgid "Настройки сохранены"
+msgstr ""
+
+#: theme-options.php:133
+msgid "Цветовая схема"
+msgstr ""
+
+#: theme-options.php:152
+msgid "Выберите цветовую схему по-умолчанию"
+msgstr ""
+
+#: theme-options.php:161
+msgid "Структура сайта"
+msgstr ""
+
+#: theme-options.php:163
+msgid "Структура сайта по-умолчанию"
+msgstr ""
+
+#: theme-options.php:196
+msgid "Сохранить настройки"
+msgstr ""
+
+#~ msgid "Primary Menu"
+#~ msgstr "Primary Menu111"
+
+#~ msgid "TEst"
+#~ msgstr "Test test test"

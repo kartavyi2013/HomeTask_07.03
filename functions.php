@@ -76,20 +76,30 @@ add_action( 'after_setup_theme', 'hometask_setup' );
 if ( ! function_exists( 'hometask_setup' ) ):
 
 function hometask_setup() {
+	load_theme_textdomain('hometask', get_template_directory() . '/languages/');
 
 	// This theme has some pretty cool theme options
 	require( dirname( __FILE__ ) . '/theme-options.php' );
 
 	// This theme uses post thumbnails
 	add_theme_support( 'post-thumbnails' );
-
+	add_theme_support('title-tag');
+	
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'custom-logo', array(
+		 'height'      => 100,
+   		 'width'       => 400,
+    	 'flex-height' => true,
+   		 'flex-width'  => true,
+   		 'header-text' => array( 'site-title', 'site-description' ),
+	) );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Основная навигация', 'hometask' ),
 	) );
+	//define("HOMETASK_THEME_TEXTDOMAIN", 'hometask');
 
 	// This theme allows users to set a custom background
 	add_custom_background();
@@ -118,8 +128,6 @@ function hometask_setup() {
 	set_post_thumbnail_size( HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true );
 
 
-	// Add a way for the custom header to be styled in the admin panel that controls
-	// custom headers. See hometask_admin_header_style(), below.
 	add_custom_image_header( 'hometask_header_style', 'hometask_admin_header_style', 'hometask_admin_header_image' );
 
 	// ... and thus ends the changeable header business.
