@@ -502,3 +502,132 @@ switch ( $color_scheme ) {
 		);
 		break;
 }
+
+
+
+function hometask_customize_register($wp_customize){
+    
+    $wp_customize->add_section('hometask_color_scheme', array(
+        'title'    => __('Мои настройки', 'hometask'),
+        'priority' => 30,
+    ));
+	
+	$wp_customize->add_setting('hometask_theme_options[text_test]', array(
+        'default'        => 'hometask.local',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'option',
+ 
+    ));
+ 
+    $wp_customize->add_control('hometask_text_test', array(
+        'label'      => __('Title', 'hometask'),
+        'section'    => 'hometask_color_scheme',
+        'settings'   => 'hometask_theme_options[text_test]',
+    ));
+	
+	$wp_customize->add_setting( 'hometask_theme_options[color_scheme]', array(
+		'default'        => '',
+		'type'           => 'option',
+		'capability'     => 'edit_theme_options',
+	) );
+	
+	$wp_customize->add_control( 'hometask_color_scheme', array(
+		'label'      => __( 'Color Scheme', 'hometask' ),
+		'section'    => 'hometask_color_scheme',
+		'settings'   => 'hometask_theme_options[color_scheme]',
+		'type'       => 'radio',
+		'choices'    => array(
+			'value1' => 'Вариант 1',
+			'value2' => 'Вариант 2',
+			'value3' => 'Вариант 3',
+			),
+	) );
+
+	 $wp_customize->add_setting('hometask_theme_options[header_select]', array(
+	'default'        => 'value2',
+	'capability'     => 'edit_theme_options',
+	'type'           => 'option',
+
+    ));
+    $wp_customize->add_control( 'example_select_box', array(
+        'settings' => 'hometask_theme_options[header_select]',
+        'label'   => 'Select Something:',
+        'section' => 'hometask_color_scheme',
+        'type'    => 'select',
+        'choices'    => array(
+            'value1' => 'Вариант 1',
+            'value2' => 'Вариант 2',
+            'value3' => 'Вариант 3',
+        ),
+    ));
+ 
+    $wp_customize->add_setting('hometask_theme_options[image_upload_test]', array(
+        'default'           => 'image.jpg',
+        'capability'        => 'edit_theme_options',
+        'type'           => 'option',
+ 
+    ));
+ 
+    $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'image_upload_test', array(
+        'label'    => __('Image Upload example', 'hometask'),
+        'section'  => 'hometask_color_scheme',
+        'settings' => 'hometask_theme_options[image_upload_test]',
+    )));
+	
+	    $wp_customize->add_setting('hometask_theme_options[upload_test]', array(
+        'default'           => 'arse',
+        'capability'        => 'edit_theme_options',
+        'type'           => 'option',
+ 
+    ));
+ 
+    $wp_customize->add_control( new WP_Customize_Upload_Control($wp_customize, 'upload_test', array(
+        'label'    => __('Upload image example', 'hometask'),
+        'section'  => 'hometask_color_scheme',
+        'settings' => 'hometask_theme_options[upload_test]',
+    )));
+	
+    $wp_customize->add_setting('hometask_theme_options[link_color]', array(
+        'default'           => '000',
+        'sanitize_callback' => 'sanitize_hex_color',
+        'capability'        => 'edit_theme_options',
+        'type'           => 'option',
+ 
+    ));
+ 
+    $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'link_color', array(
+        'label'    => __('Link Color', 'hometask'),
+        'section'  => 'hometask_color_scheme',
+        'settings' => 'hometask_theme_options[link_color]',
+    )));
+	
+	$wp_customize->get_setting( 'hometask_theme_options[text_test]' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'hometask_theme_options[link_color]' )->transport = 'postMessage';
+	if ( $wp_customize->is_preview() && ! is_admin() ) { add_action( 'wp_footer', 'hometask_customize_preview', 21); }
+	
+}
+add_action('customize_register', 'hometask_customize_register');
+
+function hometask_customize_preview() {
+    ?>
+    <script type="text/javascript">
+	( function( $ ) {
+
+		// Update the site title in real time...
+		wp.customize( 'hometask_theme_options[text_test]', function( value ) {
+			value.bind( function( newval ) {
+				$( '#logo a' ).html( newval );
+			} );
+		} );
+	 
+		//Update site title color in real time...
+		wp.customize( 'hometask_theme_options[link_color]', function( value ) {
+			value.bind( function( newval ) {
+				$('a').css('color', newval );
+			} );
+		} );
+		
+	} )( jQuery );
+    </script>
+    <?php
+}

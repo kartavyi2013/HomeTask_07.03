@@ -40,6 +40,14 @@
 ?>
 </head>
 
+<? 
+/*Новый вид*/
+$hometask_theme_options = get_option( "hometask_theme_options" ); ?>
+<div id="logo">
+	<h1><a href="<?php echo get_option('home'); ?>"><?php echo $hometask_theme_options['text_test']; ?></a></h1>
+	<div class="description"><?php bloginfo('description'); ?></div>
+</div>
+
 <body <?php body_class(); ?>>
 <?php do_action( 'hometask_before' ); ?>
 <div id="container" class="hfeed">
